@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Data_Manage_Ment {
 	void addSeller(Seller seller) {
 		try {
-			boolean temp = false;
+			boolean temp = true;
 			PreparedStatement pstm = Connect.getConnection().prepareStatement("select * from user where name = ? and password = ?");
 			pstm.setString(1, seller.userName);
 			pstm.setString(2, seller.password);
